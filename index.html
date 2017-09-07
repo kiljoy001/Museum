@@ -43,18 +43,6 @@
                 if (response.status === 'connected')
                 {
                     debugger;
-//                    FB.api( "/fql?q=select%20manage_pages%2C%20email%2C%20user_about_me%2C%20user_hometown%2C%20user_photos%2C%20user_posts%2C%20user_status%2C%20user_videos%2C%20pages_show_list%20FROM%20permissions%20WHERE%20uid%3Dme()", function(resp) {
-//                        for(var key in resp[0]) {
-//                            if(resp[0][key] === "1")
-//                                console.log(key+' is granted');
-//                            else
-//                                console.log(key+' is not granted');
-//                        }
-//                    });
-//                    FB.api('/me', {fields: 'last_name'}, function(response) {
-//                        console.log(response);
-//                    });
-//                    debugger;
                     FB.api(
                         '/me/feed',
                         'GET',
@@ -69,15 +57,6 @@
 
                         }
                     );
-//                    FB.api('/me/feed', function (apicallback)
-//                    {
-//                        debugger;
-//                        for (var i = 0; i < apicallback.data.length; i++)
-//                        {
-//                            $('.posts').append(JSON.stringify(apicallback.data[i].message));
-//                        }
-//
-//                    });
                 }
                 else {
                     FB.login();
@@ -130,7 +109,7 @@
                     width="500" height="502" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
         </div>
 
-        </br>
+        <br/>
     </div>
 
 </body>
